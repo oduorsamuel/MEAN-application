@@ -1,0 +1,20 @@
+npm install @angular/cli
+npm cache veryfy
+ng new  my-dream-app
+ng add @angular/material
+
+//MONGODB
+mongod//starting db
+mongo//accessing console
+use issues;//creating db
+db.createCollection('issues'); //creating table
+show collections// display tables
+//INSERTING DOCUMENT
+db.issues.insert({ "status": "open", "title": "open", "responsible": "open", "description": "open", "severity": "open" });
+
+//material
+npm insatall --save @angular/material
+npm insatall --save @angular/cdk component development Kit// contain general tools for developing component
+npm insatall --save @angular/animation // for transition effect
+ npm install --save hammerjs// tongle/dropdowns
+ @import '~@angular/material/prebuilt-themes/indigo-pink.css';//themes

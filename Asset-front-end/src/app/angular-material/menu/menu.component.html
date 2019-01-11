@@ -1,0 +1,16 @@
+<mat-card class="panel">
+  <mat-card-title>
+  </mat-card-title>
+  <mat-card-content>
+   <mat-sidenav-container class="container">
+     <mat-sidenav #sidenav class="sidenav">
+       For content
+     </mat-sidenav>
+     <div class="sidenav-content">
+       <button mat-button type="button" (click)="sidenav.open()">
+         Click To Open
+       </button>
+     </div>
+   </mat-sidenav-container>
+  </mat-card-content>
+</mat-card>

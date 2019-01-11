@@ -1,0 +1,52 @@
+<mat-card class="margin">
+    <div>
+        <h2 style="margin-left:1em">Material-Form Demo</h2>
+      <form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+        <table class="fullwidth" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="fullwidth">
+                <input type="text" matInput placeholder="First Name" id="firstname" [(ngModel)]="address.firstname" name="firstname">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="fullwidth">
+                <input type="text" matInput placeholder="Last Name" id="lasttname" [(ngModel)]="address.lastname" name="lasttname">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      
+        <p>
+                <mat-form-field class="fullwidth">
+                  <textarea class="fullwidth" matInput placeholder="Address" id="address" [(ngModel)]="address.address" name="address"></textarea>
+                </mat-form-field>
+      
+        </p>
+      
+        <table class="fullwidth" cellspacing="0">
+          <tr>
+            <td>
+                <mat-form-field class="fullwidth">
+                    <input type="text" matInput placeholder="City" id="city" [(ngModel)]="address.city" name="city">
+                  </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="fullwidth">
+                    <input type="text" matInput placeholder="State" id="state" [(ngModel)]="address.state" name="state">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="fullwidth">
+                    <input type="text" maxlength="5" #postalcode matInput placeholder="Postal Code" id="Postalcode" [(ngModel)]="address.Postalcode" name="Postalcode">
+                </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <p>
+          <button type="submit" mat-raised-button color="primary">Submit</button>
+        </p>
+      </form>
+      </div>
+      
+</mat-card>

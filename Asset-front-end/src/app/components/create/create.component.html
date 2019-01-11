@@ -1,0 +1,34 @@
+<div>
+  <mat-card class="margin">
+    <section class="mat-typography">
+      <h3>Create A New Asset</h3>
+    </section>
+    <mat-divider></mat-divider>
+    <br>
+    <form [formGroup]="createForm" class="create-form">
+      <mat-form-field class="field-full-width"> 
+         <input matInput placeholder="Asset Name" formControlName="deviceName" #deviceName>
+      </mat-form-field>
+
+      <mat-form-field class="field-full-width"> 
+          <input matInput placeholder="Responsible" formControlName="responsible" #responsible>
+       </mat-form-field>
+
+       <mat-form-field class="field-full-width"> 
+          <textarea matInput placeholder="Description" formControlName="description" #description></textarea>
+       </mat-form-field>
+
+       <mat-form-field class="field-full-width"> 
+          <mat-select placeholder="Department" formControlName="department" #department>
+            <mat-option value="Computer Science">Computer Science</mat-option>
+            <mat-option value="Computer Technology">Computer Technology</mat-option>
+            <mat-option value="Information Technology">Information Technology</mat-option>
+            </mat-select>
+       </mat-form-field>
+       <mat-divider></mat-divider>
+       <br><br>
+       <button mat-raised-button color="accent" routerLink="/list">Back</button>
+       <button type="submit" mat-raised-button color="primary" (click)="addAsset(deviceName.value,responsible.value,description.value,department.value)" [disabled]="createForm.pristine || createForm.invalid">Save</button>
+    </form>
+  </mat-card>
+</div>

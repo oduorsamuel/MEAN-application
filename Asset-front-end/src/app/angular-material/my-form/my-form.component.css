@@ -1,0 +1,15 @@
+.formwidth{
+    width: 50%;
+    margin-left: 2em;
+}
+
+.fullwidth{
+    width: 100%;
+}
+
+.margin{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 25%;
+    margin-top: 10px;
+}

@@ -1,0 +1,24 @@
+<div>
+  <h2 mat-dialog-title>
+    This is my Dialog
+  </h2>
+  <mat-dialog-content>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit adipisci, alias sapiente magnam illo optio
+    excepturi facere incidunt. Itaque quos tempora odio alias deserunt perferendis iusto beatae facilis voluptates
+    nobis.
+    <br>
+    <br>
+    <strong>
+      {{data}}
+    </strong>
+  </mat-dialog-content>
+  <hr>
+  <mat-dialog-actions>
+    <button mat-raised-button color="accent" (click)="onClose()">
+      Close
+    </button>
+    <button mat-raised-button color="secondary" (click)="onCancel()">
+      Cancel
+    </button>
+  </mat-dialog-actions>
+</div>

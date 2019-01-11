@@ -1,0 +1,52 @@
+<mat-toolbar>
+  <span>Ng6 Asset Monitor</span>
+</mat-toolbar>
+  <button class="margin" mat-raised-button color="primary" [matMenuTriggerFor]="Asset">Manage Asset</button>
+  <mat-menu #Asset="matMenu">
+   <button mat-menu-item>
+     <span routerLink="/list">Home</span>
+   </button>
+   <button mat-menu-item>
+      <span routerLink="/create">Create</span>
+    </button>
+  </mat-menu>
+  <button mat-raised-button color="accent" [matMenuTriggerFor]="menu">Angular Material</button>
+  <mat-menu #menu="matMenu">
+   <button mat-menu-item>
+     <mat-icon>settings</mat-icon>
+     <span routerLink="/dialog">Dialog Demo</span>
+   </button>
+   <button mat-menu-item>
+    <mat-icon>voicemail</mat-icon>
+    <span routerLink="/form">Form Demo</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>
+    <span routerLink="/tooltip">Tooltip</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>voicemail</mat-icon>
+    <span routerLink="/snackbar">Snackbar</span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="submenu">
+   <mat-icon>edit</mat-icon>
+   <span>Others</span>
+  </button>
+  </mat-menu>
+  <mat-menu #submenu="matMenu">
+  <button mat-menu-item>
+  <span routerLink="/menu">Sidenav</span>
+  </button>
+  <button mat-menu-item>
+    <span routerLink="/list">Home</span>
+  </button>
+  </mat-menu>
+  <button  mat-raised-button color="primary" routerLink="/graph">Bar Graph</button>
+  <br><br>
+  <mat-divider></mat-divider>
+  <br>
+<div>
+<router-outlet></router-outlet>
+</div>
+
+

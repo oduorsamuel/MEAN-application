@@ -1,0 +1,42 @@
+<div>
+  <br>
+  <mat-card class="margin">
+    <mat-table [dataSource]="assets">
+      <ng-container matColumnDef="_id">
+        <mat-header-cell *matHeaderCellDef> <strong>ID</strong></mat-header-cell>
+        <mat-cell *matCellDef="let assets">{{ assets._id }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="deviceName">
+        <mat-header-cell *matHeaderCellDef><strong>Device Name</strong></mat-header-cell>
+        <mat-cell *matCellDef="let assets">{{ assets.deviceName }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="responsible">
+        <mat-header-cell *matHeaderCellDef><strong>Responsible</strong></mat-header-cell>
+        <mat-cell *matCellDef="let assets">{{ assets.responsible}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="department">
+        <mat-header-cell *matHeaderCellDef><strong>Department</strong></mat-header-cell>
+        <mat-cell *matCellDef="let assets">{{ assets.department}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef><strong>Status</strong></mat-header-cell>
+        <mat-cell *matCellDef="let assets">{{assets.status}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef class="mat-column-right"><strong>Action</strong></mat-header-cell>
+        <mat-cell *matCellDef="let assets" class="mat-column-right">
+        <button mat-button color="primary" (click)="editAsset(assets._id)">Edit</button>
+        <button mat-button color="warn" (click)="deleteAsset(assets._id)">Delete</button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumn"></mat-header-row>
+      <mat-row *matRowDef="let Rows; Columns: displayedColumn;"></mat-row>
+
+    </mat-table>
+  </mat-card>
+</div>
