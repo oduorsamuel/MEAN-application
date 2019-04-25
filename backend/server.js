@@ -64,8 +64,8 @@ router.route('/assets/add').post((req, res) => {
 });
 
 //Updating endpoint
-router.route('/assets/update/:Id').post((req, res) => {
-    Assets.findById(req.params.Id, (err, asset) => {
+router.route('/assets/update/:id').post((req, res) => {
+    Assets.findById(req.params.id, (err, asset) => {
         if (!asset)
             // return next(new Error('could not load document'));
             return (err)

@@ -13,7 +13,7 @@ import { from } from 'rxjs';
 })
 export class EditComponent implements OnInit {
   updateForm:FormGroup;
-  Id:String;
+  id:String;
   asset: any={};
 
   constructor(private assetServise: AssetService, private router:Router, private route:ActivatedRoute, private snackbar:MatSnackBar, private fb:FormBuilder) {
@@ -33,8 +33,8 @@ export class EditComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params=>{
-      this.Id=params.id;
-      this.assetServise.getAssetById(this.Id).subscribe(res=>{
+      this.id=params.id;
+      this.assetServise.getAssetById(this.id).subscribe(res=>{
       this.asset=res;
       this.updateForm.get('deviceName').setValue(this.asset.deviceName);
       this.updateForm.get('responsible').setValue(this.asset.responsible);
@@ -46,7 +46,7 @@ export class EditComponent implements OnInit {
   }
       //eventHandler
       updateAsset(deviceName,responsible,description,department,status){
-        this.assetServise.updateAsset(this.Id, deviceName,responsible,description,department,status).subscribe(()=>{
+        this.assetServise.updateAsset(this.id, deviceName,responsible,description,department,status).subscribe(()=>{
           this.snackbar.open('Asset Updated Succesfully','Ok',{
             duration:3000
           });

@@ -31,7 +31,7 @@ export class AssetService {
 
   }
   
-  updateAsset(deviceName, responsible, description, department, status, Id) {
+  updateAsset(id, deviceName, responsible, description, department, status,) {
     const asset = {
       deviceName: deviceName,
       responsible: responsible,
@@ -40,7 +40,7 @@ export class AssetService {
       status: status,
 
     }
-    return this.http.post(`${this.uri}/assets/update/${Id}`, asset);
+    return this.http.post(`${this.uri}/assets/update/${id}`, asset);
 
   }
 
